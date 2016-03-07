@@ -9,3 +9,10 @@ class Fixnum
   end
 end
 ```
+## 代码效果：verilog
+```
+always @(posedge hclk) begin : ID_MEM_EMPTY
+    if(id_wpt != id_rpt)  id_mem_empty <= `TD 0;
+    else id_mem_empty <=  `TD 1;
+end
+```
